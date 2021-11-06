@@ -26,6 +26,11 @@ export default makeStyles((theme) => ({
   },
   googleButton: {
     marginBottom: theme.spacing(2),
-    marginTop: theme.spacing(3),
   },
+  message: {
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginBottom: '10px',
+  }
 }));
