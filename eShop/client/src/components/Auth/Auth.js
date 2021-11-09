@@ -54,8 +54,6 @@ const SignUp = () => {
 
   const googleError = () => console.log('Google Sign In was unsuccessful. Try again later');
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
   return (
     <Container component="main" maxWidth="xs">
       <Paper className={classes.paper} elevation={6}>

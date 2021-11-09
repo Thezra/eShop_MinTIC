@@ -3,8 +3,9 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import postRoutes from './routes/posts.js';
+import postRouter from './routes/posts.js';
 import userRouter from "./routes/user.js";
+import saleRouter from "./routes/sales.js";
 
 const app = express();
 
@@ -12,8 +13,9 @@ app.use(express.json({ limit: '30mb', extended: true }))
 app.use(express.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
-app.use('/posts', postRoutes);
+app.use('/posts', postRouter);
 app.use("/user", userRouter);
+app.use('/sales', saleRouter);
 
 const CONNECTION_URL = 'mongodb+srv://eventasmaster:eventasmaster123@cluster0.jbdn6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;

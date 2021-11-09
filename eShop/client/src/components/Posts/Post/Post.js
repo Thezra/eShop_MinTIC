@@ -42,7 +42,7 @@ const Post = ({ post, setCurrentId }) => {
         </div>
         <Typography className={classes.title} gutterBottom variant="h5" component="h2">COP {post.price}</Typography>
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">{post.description}...</Typography>
+          <Typography variant="body2" color="textSecondary" component="p">{post.description}</Typography>
         </CardContent>
       <CardActions className={classes.cardActions}>
         {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (

@@ -63,5 +63,10 @@ export default makeStyles((theme) => ({
   buttons: {
     marginRight: '40px',
     padding: '10px 50px',
-  }
+    backgroundColor: '#490989',
+  },
+  button: {
+    marginRight: '40px',
+    padding: '10px 50px',
+  },
 }));

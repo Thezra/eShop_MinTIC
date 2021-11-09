@@ -6,6 +6,8 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Auth from './components/Auth/Auth';
 import CreatorOrTag from './components/CreatorOrTag/CreatorOrTag';
+import SalesShow from './components/SalesShow/SalesShow';
+import Validation from './components/Validation/Validation'
 
 const App = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
@@ -20,6 +22,9 @@ const App = () => {
           <Route path="/posts/search" exact component={Home} />
           <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTag} />
           <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
+          <Route path="/sales" exact component={SalesShow} />
+          <Route path="/sales/search" exact component={SalesShow} />
+          <Route path="/validation" exact component={Validation} />
         </Switch>
       </Container>
     </BrowserRouter>

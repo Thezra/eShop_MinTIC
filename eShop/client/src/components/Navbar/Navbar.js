@@ -43,8 +43,9 @@ const Navbar = () => {
         <img className={classes.image} src={ShoppingBag} alt="icon" height="40px" />
       </Link>
       <Toolbar className={classes.toolbar}>
-        <Button className={classes.buttons} component={Link} to="/auth" variant="contained" color="primary">Productos</Button>
-        <Button className={classes.buttons} component={Link} to="/posts" variant="contained" color="primary">Ventas</Button>
+        <Button className={classes.buttons} component={Link} to="/posts" variant="contained" color="primary">Productos</Button>
+        <Button className={classes.buttons} component={Link} to="/sales" variant="contained" color="primary">Ventas</Button>
+        <Button className={classes.buttons} component={Link} to="/validation" variant="contained" color="primary">Validación</Button>
         {user?.result ? (
           <div className={classes.profile}>
             <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
@@ -52,7 +53,7 @@ const Navbar = () => {
             <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Cerrar Sesión</Button>
           </div>
         ) : (
-          <Button className={classes.buttons} component={Link} to="/auth" variant="contained" color="primary">Ingresar</Button>
+          <Button className={classes.button} component={Link} to="/auth" variant="contained" color="primary">Ingresar</Button>
         )}
       </Toolbar>
     </AppBar>
