@@ -18,7 +18,7 @@ app.use(cors());
 
 app.use('/posts', postRouter);
 app.use("/user", userRouter);
-app.use('/sales', saleRouter);
+//app.use('/sales', saleRouter);
 
 app.get('/', (req, res) => {
   res.send('Bienvenido a la eShop')
