@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/posts" exact component={Home} />
           <Route path="/posts/search" exact component={Home} />
           <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTag} />
-          <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
+          <Route path="/auth" exact component={() => <Auth />} />
           <Route path="/sales" exact component={SalesShow} />
           <Route path="/sales/search" exact component={SalesShow} />
           <Route path="/validation" exact component={Validation} />

@@ -47,7 +47,7 @@ const Post = ({ post, setCurrentId }) => {
       <CardActions className={classes.cardActions}>
         {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
           <Button size="small" color="secondary" onClick={() => dispatch(deletePost(post._id))}>
-            <DeleteIcon fontSize="small" /> &nbsp; Delete
+            <DeleteIcon fontSize="small" /> &nbsp; Borrar
           </Button>
         )}
       </CardActions>
