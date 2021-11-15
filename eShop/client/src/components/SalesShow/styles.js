@@ -17,4 +17,11 @@ export default makeStyles((theme) => ({
       flexDirection: 'column-reverse',
     },
   },
+  image: {
+    textAlign: 'center',
+    display: 'block',
+    marginleft: 'auto',
+    marginright: 'auto',
+    width: '50%',
+  },
 }));
